@@ -1,8 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0;url= https://0d447a5ce03d.ngrok-free.app/student/register_course/1" /> <!-- Thay domain mới vào đây -->
     <title>Redirecting...</title>
+    <script>
+      // Lấy tham số course_id từ URL
+      const params = new URLSearchParams(window.location.search);
+      const courseId = params.get('course_id');
+      
+      // Domain ngrok mới nhất
+      const ngrokDomain = "https://207a0556d68f.ngrok-free.app";
+      
+      // Nếu có course_id, redirect đến trang đăng ký khóa học cụ thể
+      if (courseId) {
+        window.location.href = ngrokDomain + "/student/register_course/" + courseId;
+      } else {
+        // Nếu không có course_id, redirect về trang chủ
+        window.location.href = ngrokDomain;
+      }
+    </script>
   </head>
   <body>
     <p>Đang chuyển hướng đến hệ thống e-learning...</p>
